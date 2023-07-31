@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Real Estate Web App">
+    <meta name="author" content="Azim Mahmud">
+    <title>Real Estate Web App</title>
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="Real Estate Web App">
+    <meta name="twitter:description" content="Real Estate Web App">
+    <meta name="twitter:image" content="images/homeid-social-logo.png">
+
+    <meta property="og:url" content="index">
+    <meta property="og:title" content="Real Estate Web App">
+    <meta property="og:description" content="Real Estate Web App">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/homeid-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <partial name="_CSS"/>
+
+    @RenderSection("Styles", required: false)
+</head>
+<body >
+
+<partial name="_Header"/>
+
+<main id="content">
+    @RenderBody()
+</main>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/">
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<partial name="_Footer"/>
+
+<partial name="_JS"/>
+
+@RenderSection("Scripts", required: false)
+</body>
+</html>
